@@ -1,0 +1,47 @@
+{
+  "name": "typescript-jest-main",
+  "version": "1.0.0",
+  "description": "Nuxt.js project",
+  "author": "Brant Wills <bwills@discovertec.com>",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint",
+    "test": "npm run unit",
+    "unit": "jest --config test/unit/jest.conf.js --coverage",
+    "watch": "jest --config test/unit/jest.conf.js --watch --coverage"
+  },
+  "dependencies": {
+    "nuxt": "^1.0.0-rc11",
+    "vue": "^2.5.9"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "babel-jest": "^21.2.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.3.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-html": "^3.1.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "jest": "^21.2.1",
+    "jest-serializer-vue": "^0.3.0",
+    "jest-vue-preprocessor": "^1.3.1",
+    "nuxt-class-component": "^1.1.3",
+    "ts-jest": "^21.2.4",
+    "ts-loader": "^3.2.0",
+    "typescript": "^2.6.2",
+    "vue-jest": "^1.3.0",
+    "vue-server-renderer": "^2.5.9",
+    "vue-template-compiler": "^2.5.9",
+    "vue-test-utils": "^1.0.0-beta.6",
+    "vuex-class": "^0.3.0"
+  }
+}
