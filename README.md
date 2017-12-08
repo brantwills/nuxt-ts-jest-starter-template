@@ -2,14 +2,18 @@
 
 A [Nuxt.js](https://github.com/nuxt/nuxt.js) starter project template without the distraction of a complicated development environment.
 
-Live demo: https://starter.nuxtjs.org
+Adjusted to include typescript and jest
+
+## Known Issues
+
+The coverage percentage is correct, however lcov-report displays broken module.ts.html 
 
 ## Installation
 
 This is a project template for [vue-cli](https://github.com/vuejs/vue-cli).
 
 ``` bash
-$ vue init nuxt-community/starter-template my-project  
+$ vue init brantwills/nuxt-ts-jest-starter-template my-project  
 $ cd my-project                     
 # install dependencies
 $ npm install # Or yarn install
