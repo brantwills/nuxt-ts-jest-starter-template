@@ -1,8 +1,9 @@
 {
-  "name": "typescript-jest-main",
+  "name": "{{ name }}",
   "version": "1.0.0",
-  "description": "Nuxt.js project",
-  "author": "Brant Wills <bwills@discovertec.com>",
+  "description": "{{ description }}",
+  "author": "{{ author }}",
+  "license": "{{ license }}",
   "private": true,
   "scripts": {
     "dev": "nuxt",
