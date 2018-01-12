@@ -1,5 +1,5 @@
 import Vuex from 'vuex'
-import { shallow, createLocalVue } from "vue-test-utils";
+import { shallow, createLocalVue } from '@vue/test-utils'
 import Page from "~/pages/index.vue";
 
 const localVue = createLocalVue()
