@@ -38,6 +38,9 @@
       "~/static/*": [
         "./static/*"
       ],
+      "~/store/*": [
+        "./store/*"
+      ],
       "~/types/*": [
         "./types/*"
       ],
