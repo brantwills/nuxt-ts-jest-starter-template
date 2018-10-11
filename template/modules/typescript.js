@@ -1,29 +1,25 @@
-module.exports = function (options) {
-  // Add .ts extension for store, middleware and more
-  this.nuxt.options.extensions.push('ts')
+module.exports = function () {
+  // Add .ts & .tsx extension to Nuxt
+  this.nuxt.options.extensions.push('ts', 'tsx')
 
-  // Extend build
+  // Extend webpack build
   this.extendBuild(config => {
-    const tsLoader = {
+    // Add TypeScript
+    config.module.rules.push({
+      test: /\.tsx?$/,
       loader: 'ts-loader',
-      options: {
-        appendTsSuffixTo: [/\.vue$/]
-      }
+      options: { appendTsSuffixTo: [/\.vue$/] }
+    })
+
+    // Add .ts extension in webpack resolve
+    if (!config.resolve.extensions.includes('.ts')) {
+      config.resolve.extensions.push('.ts')
     }
-    // Add TypeScript loader
-    config.module.rules.push(
-      Object.assign(
-        {
-          test: /((client|server)\.js)|(\.tsx?)$/
-        },
-        tsLoader
-      )
-    )
-    // Add TypeScript loader for vue files
-    for (let rule of config.module.rules) {
-      if (rule.loader === 'vue-loader') {
-        rule.options.loaders.ts = tsLoader
-      }
+
+    // Add .tsx extension in webpack resolve
+    if (!config.resolve.extensions.includes('.tsx')) {
+      config.resolve.extensions.push('.tsx')
     }
   })
 }
+
